@@ -1,0 +1,513 @@
+
+	Variables
+	Contienen la información unitaria de los programas
+	Tienen un nombre
+	Almacena un valor
+	Tiene un determinado tipo 
+	Estado de un programa es el valor de las variables en tal instante
+	Cada variable tiene su espacio en la RAM, será la CPU quién buscará tal dato.
+	La variable puede cambiar el dato a la que esta asociada. 
+	Identificador/Nombre de una variable
+	No pueden coincidir con un comando de la programación
+	Distingue entre mayúsculas y minúsculas
+	Los nombres solo pueden empezar por letras, NO tienen acentos.
+	JAVA
+	Los identificadores de variables siempre empiezan con minus.
+	Tipos de datos
+	Booleano
+	True o False
+	Declaración de variables
+	<tipo><identificador>;
+	<tipo><identificador>,<identificador>……
+	Asignación de variables
+	<tipo><identificador> = <expresión>
+	Instrucciones útiles
+	System.out.println(“texto”)
+Práctica 12/9/2024
+public class MiPrimerEjercicio{
+  public static void main(String[]args){
+    System.out.println("Hola Mundo");
+  }
+}
+
+
+public class MiSegundoEjercicio{
+  public static void main(String[]args{
+    int valor1=10;
+    int valor2=20;
+    System.out.println("valor 1 es igual a" valor2)
+    System.out.println("valor 2 es igual a" valor1)
+  }
+                          
+Teoría 16/9/2024
+	Conversión entre tipos de datos
+	Solo se pueden transformar en un orden ascendente en cuanto a memoria
+	*Al introducir los datos se clasifican con minúsculas, pero cuando la primera letra es mayus se refiere a la clase envolvente de este tipo de datos
+	Operadores aritméticos básicos
+	+ Suma
+	- Resta
+	* Multiplicación
+	/ División
+	% Resto de una división entre enteros o módulo
+	= Asignación
+	+= Incremento
+	-= Decremento
+	*=,/=,%=
+	++ Preincremento y postincremento
+	-- Predecremento y postdecremento
+	Operadores lógicos básicos
+	== Igualdad
+	&& And
+	|| Or
+	^ XOR
+	> Mayor		>= Mayor o igual
+	< Menor		<= Menor o igual
+	!= Distinto
+*ln* sirve para tras terminar la acción introducir un intro y hacer un salto de línea
+
+Práctica 16/9/2024
+
+public class MiTercerEjercicio {
+  public static void main(String[]args){
+  System.out.println("Víctor Alcolea, 24M019");
+  }
+}
+
+public class MiCuartoEjercicio {
+  public static void main(String[]args){
+  int dato=2;
+  ++dato;
+  System.out.println("Dato es igual a "+ dato);
+  dato++;
+  System.out.println("Dato es igual a "+ dato);
+  }
+}
+
+public class MiQuintoEjercicio{
+  //Declaración de variables
+  public static void main(String[]args){
+  int x=3;
+  int y=2;
+  //La introducción de variables también la puedes expresar como "int x=3, y=2;"
+  System.out.println("X es igual a "+ x);
+  System.out.println("Y es igual a "+ y);
+  x=x+1;
+  System.out.println("X es igual a "+ x);
+  }
+}
+
+Teoría 19/9/2024
+  int x=3;
+  int y=2;								
+  System.out.println("La suma es igual a "+ (x+y));	
+ //La solución de este ejercicio será “5”
+  System.out.println("La suma es igual a "+ x+y);	
+//La solución de este ejercicio será “32”, esto dif. se debe a los paréntesis
+
+Para poder hacer comentarios más largos también se puede usar el /*	*/
+
+Práctica 19/9/2024
+public class MiSextoEjercicio{
+  public static void main(String[]args){
+  int x=3, y=5;
+  System.out.println("El valor de x="+ x+"e y="+y);
+  System.out.println("El valor de x=++y es "+(x=++y));
+  x=++y;
+  }
+}
+
+public class MiSéptimoEjercicio{
+  public static void main(String[]args){
+  int x=3, y=2;
+  System.out.println("El valor de x="+x+" El valor de y="+y);
+  y++;
+  x--;
+  System.out.println("El valor de x="+x+" El valor de y="+y);
+  }
+}
+        
+public class MiOctavoEjercicio{
+  public static void main(String[]args){
+    int numeroA=5, numeroB=3;
+    boolean igual,distinto,mayor,menor;
+    igual=(numeroA==numeroB);
+    distinto=(numeroA!=numeroB);
+    menor=(numeroA<numeroB);
+    mayor=(numeroA>numeroB);
+    System.out.println(distinto+""+igual+""+mayor+""+menor);
+  }
+}
+    
+public class MiOctavoEjercicio{
+  public static void main(String[]args){
+    int numeroA=5, numeroB=3;
+    boolean igual,distinto,mayor,menor;
+    igual=(numeroA==numeroB);
+    distinto=(numeroA!=numeroB);
+    menor=(numeroA<numeroB);
+    mayor=(numeroA>numeroB);
+    System.out.println(distinto+""+igual+""+mayor+""+menor);
+  }
+}
+    
+public class Ejercicio1Deberes{
+  public static void main(String[]args){
+    int N=3;
+    System.out.println("N="+N);
+    N=N+77;
+    System.out.println("N="+N);
+    N=N-3;
+    System.out.println("N="+N);
+    N=2*N;
+    System.out.println("N="+N);
+  }
+}           
+public class Ejercicio2Deberes{
+  public static void main(String[]args){
+    int A=2,B=3,C=4,D=5;
+    B=C;
+    System.out.println("B="+C);
+    C=A;
+    System.out.println("C="+A);
+    A=D;
+    System.out.println("A="+D);
+    D=B;
+    System.out.println("D="+B);
+  }
+}                   
+public class Ejercicio3Deberes{
+  public static void main(String[]args){
+  int A=3;
+  boolean par=(A%2==0);
+  System.out.println("La afirmación A es par es "+par);
+  }
+}
+public class Ejercicio4Deberes{
+  public static void main(String[]args){
+    int b=1;
+    boolean positivo=(b>0);
+    System.out.print("La afirmacion b es positivo es "+positivo);
+  }
+}
+public class Ejercicio5Deberes{
+  public static void main(String[]args){
+    int C=5;
+    boolean positivo_par=(c>=0)&&(c%2==0);
+    boolean negativo_m5=(c<0)&&(5==0);
+    boolean (m10==0)&&(c>100);
+  }
+}    		
+Teoría 23/9/2024
+	Ruptura de control
+	Lleva a cabo una sentencia
+	Tipos de sentencias
+	If(condición)	*No se pone “;” después de un in*
+<Bloque de sentencias>;
+	Si el “if” no se cumple entonces sucederá un “else” de la forma
+else
+<Bloque de sentencias>;
+Práctica 23/9/2024
+public class ElMayorDeTresNumeros{
+  public static void main(String[]args){
+    int a=5, b=8, c=10, d=14;
+      if((c>a)&&(c>b)&&(c>d)){
+      System.out.println("c="+c);
+    }
+      else if((c<a)&&(a>b)&&(a>d)){
+      System.out.println("a="+a);
+       }
+      else if((c<b)&&(a<b)&&(b>d)){
+      System.out.println("b="+b);
+       }
+       else if((c<d)&&(b<d)&&(d>a)){
+      System.out.println("d="+d);
+       }
+  }
+}
+Práctica 7/10/2024
+import java.util.Scanner;
+public class SuperCilindro{
+  public static void main(String[]args){
+  double radio,altura;
+  Scanner sc=new Scanner(System.in);
+  System.out.println("Introduce el radio");
+    radio=sc.nextDouble();
+  System.out.println("Introduce la altura");
+    altura=sc.nextDouble();
+  System.out.println("Elareadelcilindroes "+(2*bases(r)+rectangulo(h,2*Math.PI*r)));
+  }
+  public static double bases(double radio){
+    return radio*radio*Math.PI;
+  }
+  public static double rectangulo(
+    double altura, double base){
+    return altura*base;
+  }
+  }
+Teoría 14/10/2024
+	Recursividad  
+	Funciones que se llamas así mismas
+	Constan de 	
+	 Caso base o caso de parada o sol. trivial
+	Si no se añaden, habrá un StackOverFlow por el desbordamiento de la pila.
+	Las sol recursivas son mas lentas
+	La eficacia de un algoritmo recursivo, se miden con 3 factores
+	Tiempo de ejecución 
+	Uso de memoria 
+	Legibilidad
+Teoría 21/10/2024
+	String	
+	String str=”El primer programa”
+	Int longitud=length()
+	boolean resultado=str.startsWith(“El”);
+	boolean resultado=str.endsWith(“programa”);
+	ing pos=cadena.indexOf(‘e’);
+•	Esto te ubica un carácter en la palabra en este caso seria la posición 7
+•	También puedo ubicar a partir de cierto caracater.
+•	ing pos=cadena.indexOf(‘e’,10);
+•	No daría resultado 
+•	Para ver el ultimo carácter puedo probar con;
+•	ing pos=cadena.indexOf(‘e’,length-1);
+	+Métodos diapositiva 7
+En los array no se comienza x 1 sino por 0, no olvidar la posición 
+Práctica varia hasta 21/11/2024
+import java.util.Scanner;
+public class triangulo{
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    for(int i=0;i<=n;i++){
+      dibujar(i);
+    }}
+  public static void dibujar(int numero){
+    for(int i=1;i<numero;i++){
+      if(i==numero){
+        System.out.println("*");
+      }else{
+          System.out.print("*");
+        }}}}
+        
+      
+public class static void main(String[]args){
+  public static String aTexto(int[]array){
+    Array=(3,9,0,-2);
+    for (int i=0; i<variableArray1.length; i++) {
+ variableArray1[i]= sc.nextInt();
+ }
+  String v1,v2,v3,v4,vtotal;
+  vtotal=v1,v2,v3v4;
+  System.out.println(vtotal);
+  }}
+
+import java.util.Scanner;
+public class factorialn{
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Introduce un número");
+    int n=sc.nextInt();
+    if(n<0){
+          System.out.println("numero no valido");
+  }
+    else{
+      int factorial=1;
+    for(int i=1;i<=n;i++){
+      factorial=factorial*1;
+      System.out.println();
+      System.out.println("El factorial de"+n+"es:"+factorial);
+    }}}}
+
+
+import java.util.Scanner;
+  public class EjCuadrado{
+   public static void main(String[]args){
+     Scanner sc=new Scanner(System.in);
+     System.out.println("Introduzca la dimensión");
+     int n=sc.nextInt();
+     System.out.println("lado1(n)");
+     for(int i=1;i<=n;i++){
+     System.out.println("I"+lado2(n));
+                        }
+     System.out.println(lado1(n));
+     }
+public static String lado1(int n){
+  String resultado;
+    if(n==0){
+      resultado=" ";
+  }
+  else{
+      resultado="_"+lado1(n-1);
+  }
+    return resultado;
+}
+public static String lado2(int n){
+  String resultado;
+    if(n==2){
+    resultado="I";
+  }
+  else{
+    resultado=" "+lado2(n-1);
+    }
+  return resultado;
+}
+}
+  
+
+public static boolean esta(int elem, int[] array) {
+      boolean estado=false;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == elem) {
+              estado=true;   
+            }
+        }
+        return estado;
+
+public static int sumaPosPares(int[]array){
+  int sumapares=0;   
+  for (int i = 0; i < array.length; i++) {
+    if(array[i]%2==0){
+      sumapares=sumapares+array[i];
+    }}}
+    return sumapares
+    
+
+public static cuentaImpares(int[]array){
+  int sumaimpares=0;
+  for(int i=0;i<array.lenght;i++)
+    if(array[i]%2!=0){
+    sumaimpares=sumaimpares+1;
+  }}
+  return sumaimpares;
+    
+public static int contar(int elem,int[]array){
+  int res=0;
+  for(int i=0;i<array.length;i++)
+    if(elem==array[i]){
+    res=res+1;
+  }}
+return res;
+
+
+public static boolean estaOrdenado(int[]array){
+  boolean res=true;
+  for(int i=0;i<array.length-1;i++)
+    if(array[i]>array[i+1]){
+    res=false;
+  }}
+return res;
+
+        	
+
+
+
+
+
+
+
+
+
+Ejercicios Switch;
+import java.util.Scanner;
+public class pruebas{
+  public static void main(String[]args){
+     Scanner sc=new Scanner(System.in);
+//Ejercicio 5; Traducción de números
+     int num;
+     System.out.println("edad");
+       num=sc.nextInt();
+     if(num<10){
+       switch(num){
+         case 1:System.out.println("uno");break;
+         case 2:System.out.println("dos");break;
+         case 3:System.out.println("tres");break;
+         case 4:System.out.println("cuetro");break;
+         case 5:System.out.println("cinco");break;
+         case 6:System.out.println("seis");break;
+         case 7:System.out.println("siete");break;
+         case 8:System.out.println("ocho");break;
+         case 9:System.out.println("nueve");break;
+         case 10:System.out.println("diez");break;
+       }}else{
+         System.out.println("Error");}
+//Ejercicio 6 y 7; Traducción de meses y  Número de días de meses
+       int mes;
+       System.out.println("mes");
+       mes=sc.nextInt();
+       if(0<mes && mes<13){
+         switch(mes){
+         case 1:System.out.println("Enero,31");break;
+         case 2:System.out.println("Febrero,28");break;
+         case 3:System.out.println("Marzo,31");break;
+         case 4:System.out.println("Abril,30");break;
+         case 5:System.out.println("Mayo,31");break;
+         case 6:System.out.println("Junio,30");break;
+         case 7:System.out.println("Julio,31");break;
+         case 8:System.out.println("Agosto,31");break;
+         case 9:System.out.println("Septiembre,30");break;
+         case 10:System.out.println("Octubre,31");break;
+         case 11:System.out.println("Noviembre,30");break;
+         case 12:System.out.println("	
+        }}else{
+          System.out.println("Error");}
+//Ejercicio 8; Selección de menú
+        System.out.println("Menu de refranes populares");
+        System.out.println("1.Para hacer las cosas con calma");
+        System.out.println("2.Para dar ánimos");
+        System.out.println("3. Experiencia");
+        int menu=sc.nextInt();
+          switch(menu){
+            case 1:System.out.println("“No por mucho madrugar amanece más temprano");break;
+            case 2:System.out.println("A darle que es mole de olla");break;
+            case 3:System.out.println("Opcion invalida");break;
+            default:System.out.println("Error");break;}
+//Ejercicio 9; Calculadora
+        System.out.println("1.Sumar");
+        System.out.println("2.Restar");
+        System.out.println("3.Multiplicar");
+        System.out.println("4.Dividir");
+        System.out.println("Selecciona la operacion a realizar");
+        String menuu=sc.nextLine();
+        int variable;
+        if(menuu.equalsIgnoreCase("Sumar")){
+          variable=1;}
+        else if(menuu.equalsIgnoreCase("Restar")){
+          variable=2;}
+        else if(menuu.equalsIgnoreCase("Multiplicar")){
+          variable=3;}
+        else{
+          variable=4;}
+        System.out.println("Introduce los dos valores a operar");
+        int x=sc.nextInt();
+        int y=sc.nextInt();
+          switch(variable){
+            case 1:System.out.println(x+"+"+y+"="+(x+y));break;
+            case 2:System.out.println(x+"-"+y+"="+(x-y));break;
+            case 3:System.out.println(x+"*"+y+"="+(x*y));break;
+            case 4:if(y==0){System.out.println("Error");
+              }else{System.out.println(x+"/"+y+"="+(x/y));break;}
+            default:System.out.println("Error");break;
+          }
+//Ejercicio 10: Ordenación
+          int x,y,z;
+          System.out.println("Asigna valores a las variables");
+          x=sc.nextInt();
+          y=sc.nextInt();
+          z=sc.nextInt();
+          if(x>y && x>z){
+            if(y>z){
+              System.out.println(x+">"+y+">"+z);}
+            else{
+              System.out.println(x+">"+z+">"+y);}}
+          else if(y>x && y>z){
+            if(x>z){
+              System.out.println(y+">"+x+">"+z);}
+            else{
+              System.out.println(x+">"+z+">"+x);}}
+          else{
+            if(x>y){
+              System.out.println(z+">"+x+">"+y);}
+            else{
+              System.out.println(x+">"+y+">"+z);}}
+  sc.close();
+  }}
+
+       
