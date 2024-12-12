@@ -1,1 +1,28 @@
+import java.util.Scanner;
+public class pruebas{
+//Ejercicio 1: ¿Eres mayor de edad?
+  public static int rangoEdad(int edad){
+    int res;
+    if(edad<1){
+      System.out.println("La edad no puede ser negativa");
+      res=-1;}
+    else if(edad<18 && edad>0){
+      res=1;}
+    else if(18<edad && edad<65){
+      res=2;}
+    else{
+      res=3;}
+    return res;
+  }
+  public static void main(String[]args){
+     System.out.println("Para la edad 15,"+rangoEdad(15));
+     System.out.println("Para la edad 18,"+rangoEdad(18));
+     System.out.println("Para la edad 35,"+rangoEdad(35));
+     System.out.println("Para la edad 0,"+rangoEdad(0));
+     System.out.println("Para la edad -5,"+rangoEdad(-5));
+//Ejercicio 2: Ordenación
+  public static int menoramayor(int x, int y, int z){
+   
+  }}
 
+       
