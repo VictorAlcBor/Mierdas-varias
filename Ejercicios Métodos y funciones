@@ -1,60 +1,60 @@
-//import java.util.Scanner;
-public class pruebas{
-                            //Ejercicio 1: ¿Eres mayor de edad?
-  public static int rangoEdad(int edad){
-    int res;
-    if(edad<1){
-      System.out.println("La edad no puede ser negativa");
-      res=-1;}
-    else if(edad<18 && edad>0){
-      res=1;}
-    else if(18<edad && edad<65){
-      res=2;}
-    else{
-      res=3;}
-    return res;
+  import java.util.Scanner;
+  public class pruebas{
+//Ejercicio 1: ¿Eres mayor de edad?
+    public static int rangoEdad(int edad){
+      int res;
+      if(edad<1){
+        System.out.println("La edad no puede ser negativa");
+        res=-1;}
+      else if(edad<18 && edad>0){
+        res=1;}
+      else if(18<edad && edad<65){
+        res=2;}
+      else{
+        res=3;}
+      return res;
+    }
+  public static void main(String[]args){
+       System.out.println("Para la edad 15,"+rangoEdad(15));
+       System.out.println("Para la edad 18,"+rangoEdad(18));
+       System.out.println("Para la edad 35,"+rangoEdad(35));
+       System.out.println("Para la edad 0,"+rangoEdad(0));
+       System.out.println("Para la edad -5,"+rangoEdad(-5));
+//Ejercicio 2: Ordenación
+  public class pruebas{
+  public static void menoramayor(int x, int y, int z){
+    int mayor,medio,menor;
+     if(x>y && x>z){
+       mayor=x;
+       if(y>z){
+        medio=y;
+        menor=z;}
+       else{
+       medio=z;
+       menor=y;}}
+     else if(y>x && y>z){
+       mayor=y;
+       if(x>z){
+       medio=x;
+       menor=z;}
+       else{
+       medio=z;
+       menor=x;}}
+     else{
+       mayor=z;
+       if(x>y){
+       medio=x;
+       menor=y;}
+       else{
+       medio=y;
+       menor=z;}}
+    System.out.println("El orden de menor a mayor de ("+x+","+y+","+z+") es;"+menor+"<"+medio+"<"+mayor);
   }
-public static void main(String[]args){
-     System.out.println("Para la edad 15,"+rangoEdad(15));
-     System.out.println("Para la edad 18,"+rangoEdad(18));
-     System.out.println("Para la edad 35,"+rangoEdad(35));
-     System.out.println("Para la edad 0,"+rangoEdad(0));
-     System.out.println("Para la edad -5,"+rangoEdad(-5));
-                                  //Ejercicio 2: Ordenación
-public class pruebas{
-public static void menoramayor(int x, int y, int z){
-  int mayor,medio,menor;
-   if(x>y && x>z){
-     mayor=x;
-     if(y>z){
-      medio=y;
-      menor=z;}
-     else{
-     medio=z;
-     menor=y;}}
-   else if(y>x && y>z){
-     mayor=y;
-     if(x>z){
-     medio=x;
-     menor=z;}
-     else{
-     medio=z;
-     menor=x;}}
-   else{
-     mayor=z;
-     if(x>y){
-     medio=x;
-     menor=y;}
-     else{
-     medio=y;
-     menor=z;}}
-  System.out.println("El orden de menor a mayor de ("+x+","+y+","+z+") es;"+menor+"<"+medio+"<"+mayor);
-}
-public static void main(String[]args){
- menoramayor(20,5,10);
- menoramayor(5,5,0);   
-}}
-
-       
-
-       
+  public static void main(String[]args){
+   menoramayor(20,5,10);
+   menoramayor(5,5,0);   
+  }}
+  
+         
+  
+         
