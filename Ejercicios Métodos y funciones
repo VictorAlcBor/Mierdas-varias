@@ -1,60 +1,169 @@
-  import java.util.Scanner;
-  public class pruebas{
-//Ejercicio 1: ¿Eres mayor de edad?
-    public static int rangoEdad(int edad){
-      int res;
-      if(edad<1){
-        System.out.println("La edad no puede ser negativa");
-        res=-1;}
-      else if(edad<18 && edad>0){
-        res=1;}
-      else if(18<edad && edad<65){
-        res=2;}
-      else{
-        res=3;}
-      return res;
-    }
-  public static void main(String[]args){
-       System.out.println("Para la edad 15,"+rangoEdad(15));
-       System.out.println("Para la edad 18,"+rangoEdad(18));
-       System.out.println("Para la edad 35,"+rangoEdad(35));
-       System.out.println("Para la edad 0,"+rangoEdad(0));
-       System.out.println("Para la edad -5,"+rangoEdad(-5));
-//Ejercicio 2: Ordenación
-  public class pruebas{
-  public static void menoramayor(int x, int y, int z){
-    int mayor,medio,menor;
-     if(x>y && x>z){
-       mayor=x;
-       if(y>z){
-        medio=y;
-        menor=z;}
-       else{
-       medio=z;
-       menor=y;}}
-     else if(y>x && y>z){
-       mayor=y;
-       if(x>z){
-       medio=x;
-       menor=z;}
-       else{
-       medio=z;
-       menor=x;}}
-     else{
-       mayor=z;
-       if(x>y){
-       medio=x;
-       menor=y;}
-       else{
-       medio=y;
-       menor=z;}}
-    System.out.println("El orden de menor a mayor de ("+x+","+y+","+z+") es;"+menor+"<"+medio+"<"+mayor);
-  }
-  public static void main(String[]args){
-   menoramayor(20,5,10);
-   menoramayor(5,5,0);   
-  }}
-  
-         
-  
-         
+//Declaraciones
+import java.util.Scanner;
+public class AgendaHouseWork{
+public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    
+//Inicio de sesión
+    System.out.println("Introduce el nombre del usuario");
+    String nombreusuario=sc.nextLine();
+    
+//Declaración numero de filas, columnas con su matriz
+boolean bucle=true;
+String[] nombreTarea=new String[50]; 
+String[] descripcionTarea=new String[50];
+int[] hora=new int[100]; 
+String[] importanciaTarea=new String[50]; 
+
+// Variable para almacenar la última fila utilizada
+    int ultimacolumna=0;
+    
+//Menu de selección sobre que queremos hacer, cmabiar a if a false
+if(bucle){
+    System.out.println("Selecciona la operacion deseas realizar");
+    System.out.println("1.Añadir tarea");
+    System.out.println("2.Eliminar tareas");
+    System.out.println("3.Editar tareas");
+    System.out.println("4.Buscar caracteristicas sobre tareas");
+    System.out.println("5.Quiero saber que tarea hacer primero");
+    System.out.println("6.Salir");
+    int menu=sc.nextInt();
+    sc.nextLine();
+    
+//1.Añadir tarea
+        if(menu==1){
+         System.out.print("Introduce el nombre de la tarea");
+          nombreTarea[ultimacolumna]=sc.nextLine().trim();
+         System.out.print("Introduce una breve descripción de la tarea");
+          descripcionTarea[ultimacolumna]=sc.nextLine().trim();
+    //Declaración de las variables de la hora de inicio
+        int horainicio,minutoinicio;
+    //Hora inicio
+         do{
+         System.out.print("Introduce la hora de comienzo (Solo la hora del (0-23)");
+          horainicio=sc.nextInt();
+          if(!comprobarhora(horainicio)){
+             System.out.println("La hora es incorrecta,inténtalo de nuevo");
+          }}
+        while(!comprobarhora(horainicio));
+    //Minuto inicio
+        do{ 
+         System.out.print("Introduce los minutos de comienzo (Solo los minutos del (0-59)");
+         minutoinicio=sc.nextInt();
+         if(!comprobarminuto(minutoinicio)){
+          System.out.println("El minuto es incorrecto,inténtalo de nuevo");
+         }}
+        while(!comprobarminuto(minutoinicio));
+    //Declaración de las variabels de la hora de fin
+        int horafin,minutofin;
+    //Hora final
+         do{
+         System.out.print("Introduce la hora de finalización (Solo la hora del (0-23)");
+          horafin=sc.nextInt();
+          if(!comprobarhora(horafin)){
+             System.out.println("La hora es incorrecta,inténtalo de nuevo");
+          }}
+        while (!comprobarhora(horafin));
+    //Minuto final
+        do{ 
+         System.out.print("Introduce los minutos de finalización (Solo los minutos del (0-59)");
+         minutofin=sc.nextInt();
+         if(!comprobarminuto(minutofin)){
+          System.out.println("El minuto es incorrecto,inténtalo de nuevo");
+         }}
+        while(!comprobarminuto(minutofin));
+    //Asignaciones de las horas a las celdas del arrays,2 celdas por cada tarea, lo transformo en minutos para almacenarlo.
+        hora[ultimacolumna * 2] = horainicio * 60 + minutoinicio;
+        hora[ultimacolumna * 2 + 1] = horafin * 60 + minutofin;
+    //Como es la tarea
+        System.out.print("Como es la tarea, poco importante, importante o muy importante");
+        String gradoimportancia=sc.nextLine().trim();
+        if(gradoimportancia.equalsIgnoreCase("Muy importante")){
+          importanciaTarea[ultimacolumna]="\u001B[31mMuy importante";
+        }else if(gradoimportancia.equalsIgnoreCase("Importante")){
+          importanciaTarea[ultimacolumna]="\u001B[33mImportante";
+        }else if(gradoimportancia.equalsIgnoreCase("Poco importante")){
+          importanciaTarea[ultimacolumna]="\u001B[32mPoco importante";
+        }else{System.out.println("No has asignado nivel de importantica");}
+    ultimacolumna++; 
+    System.out.println("Tarea agregada con exito");}
+    else{System.out.println("No hay espacio para más tareas");}}  
+//2.Eliminar tareas(ESTO ESTA BIEN NO TOCAR)
+        else if(menu==2){
+          System.out.println("Introduce el numero de tarea que deseas eliminar");
+          int tareaEliminar=sc.nextInt();
+          if(tareaEliminar>=0 && tareaEliminar<ultimacolumna){
+               for(int i=tareaEliminar;i<ultimacolumna-1;i++){
+               nombreTarea[i]=matriz[i+1];
+               matriz[ultimacolumna-1]=null;
+               ultimacolumna--;
+               System.out.println("Tarea eliminada con exito");    
+          }
+             System.out.println("Tarea eliminada con exito");}
+          else{System.out.println("Se desconoce ese número de tarea");}}
+          
+//3.Editar tareas
+        else if(menu==3){
+            System.out.println("Introduce el nombre de la tarea que deseas modificar");
+            String tareaEditar=sc.nextLine();
+            int buscartarea=0;
+            boolean continuareditando=false;
+            if(buscartareaparaEditar(tareaEditar)){
+                System.out.println("Introduce que el número asignado a  la característica de la tarea que deseas editar"+sc.nextLine+"1.Nombre"+sc.nextLine+"2.Descripción"+sc.nextLine+"3.Hora inicio"+sc.nextLine+"4.Hora fin"+sc.nextLine+"5.Importacia");
+                int caracteristicatarea=sc.nextInt();
+                switch(caracteristicatarea){
+                  case 1:System.out.println("Introduce el nuevo nombre de la tarea "+tareaEditar);nombreTarea[buscartarea]=sc.nextLine().trim();break;
+                  case 2:System.out.println("Introduce la nueva descripción de la tarea "+tareaEditar);descripcionTarea[buscartarea]=sc.nextLine().trim();break;
+                  case 3:System.out.println("Introduce la nueva hora y posteriormente los minutos de inicio de la tarea "+tareaEditar);
+                          horainicio=sc.nextInt();
+                          minutoinicio=sc.nextInt();
+                          if(comprobarhora(horainicio)){
+                            if(comprobarminuto(minutoinicio)){
+                              hora[buscartarea * 2] = horainicio * 60 + minutoinicio;}
+                            else{System.out.println("Hora introducida imposible");};break;}
+                  case 4:System.out.println("Introduce la nueva hora y posteriormente los minutos de finalización de la tarea "+tareaEditar);
+                          horafin=sc.nextInt();
+                          minutofin=sc.nextInt();
+                          if(comprobarhora(horafin)){
+                            if(comprobarminuto(minutofin)){
+                              hora[buscartarea * 2] = horafin * 60 + minutofin;}
+                            else{System.out.println("Hora introducida imposibnomle");};break;}
+                  case 5:System.out.println("Introduce el nuevo nivel de importancia de la tarea"); gradoimportancia=sc.nextLine().trim();nivelimportancia(gradoimportancia);break;}             
+             else{System.out.println("No has seleccionado ninguna tarea registrada");}}
+        }
+//4.Buscar caracteristicas sobre tareas
+        else if(menu==4){
+          }
+//5.Quiero saber que tarea hacer primero
+        else if(menu==5){
+          }
+//6.Salir
+        else{}
+
+
+
+//Funciones auxiliares;
+//Buscar tarea para editar un apartado
+        public static boolean buscartareaparaEditar(String tarea){
+          for(int i=0;i<nombreTarea.length;i++) {
+            if(nombreTarea[i].equalsIgnoreCase(tareaEditar)) {
+              buscartarea=i;
+              continuareditando=true;}}
+          return continuareditando;}
+//Comprobar Horas
+        public static boolean comprobarhora(int hora){
+            return 0<=hora && hora<24;}
+        public static boolean comprobarminuto(int minuto){
+          return 0<=minuto && minuto<60;}
+//Funcion el nivel de importacia de una tarea
+        public static void nivelimportancia(String a){
+         if(a.equalsIgnoreCase("Muy importante")){
+          importanciaTarea[ultimacolumna]="\u001B[31mMuy importante";
+        }else if(a.equalsIgnoreCase("Importante")){
+          importanciaTarea[ultimacolumna]="\u001B[33mImportante";
+        }else if(a.equalsIgnoreCase("Poco importante")){
+          importanciaTarea[ultimacolumna]="\u001B[32mPoco importante";
+        }else{System.out.println("No has asignado nivel de importantica");}}
+sc.close();
+}}
+        
