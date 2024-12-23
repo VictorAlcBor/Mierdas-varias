@@ -71,6 +71,33 @@ public static void main(String[]args){
    menoramayor(5,5,0);   
   }
        }
+//-------------------------------------------------------------Ejercicio 3: ¿Es múltiplo?-------------------------------------------------------------
+  public static boolean esMultiplo (int x, int y){
+       boolean res=false;
+     if(x%y==0){
+         res=true;
+     }
+     return res;
+  }
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Introduce el dividendo.");
+    int dividendo=sc.nextInt();
+    System.out.println("Introduce el dividendo.");
+    int divisor=sc.nextInt();
+    while(divisor==0){
+          System.out.println("Vaya te has equivodado, introduce el dividendo, recuerda que sea distinto de 0.");
+          divisor=sc.nextInt();
+    }
+    if(esMultiplo(dividendo,divisor)==true){
+          System.out.println(dividendo+" es múltiplo de "+divisor);
+    }
+    else{
+      System.out.println(dividendo+" no es múltiplo de "+divisor);
+    }
+    }
+}
+     
   
          
   
