@@ -20,116 +20,209 @@ public class pruebas{
        System.out.println("Para la edad 35,"+rangoEdad(35));
        System.out.println("Para la edad 0,"+rangoEdad(0));
        System.out.println("Para la edad -5,"+rangoEdad(-5));
-}
+    }
 //-------------------------------------------------------------Ejercicio 2: Ordenación-------------------------------------------------------------
-  public class pruebas{
-  public static void menoramayor(int x, int y, int z){
-    int mayor,medio,menor;
-     if(x>y && x>z){
-       mayor=x;
-       if(y>z){
-        medio=y;
-        menor=z;}
-       else{
-       medio=z;
-       menor=y;}}
-     else if(y>x && y>z){
-       mayor=y;
-       if(x>z){
-       medio=x;
-       menor=z;}
-       else{
-       medio=z;
-       menor=x;}}
-     else{
-     medio=z;
-     menor=x;}}
-   else{
-     mayor=z;
-     if(x>y){
-     medio=x;
-     menor=y;}
-     else{
-     medio=y;
-     menor=z;}}
-  System.out.println("El orden de menor a mayor de ("+x+","+y+","+z+") es;"+menor+"<"+medio+"<"+mayor);
-}
-public static void main(String[]args){
- menoramayor(20,5,10);
- menoramayor(5,5,0);   
-}}     
-       mayor=z;
-       if(x>y){
-       medio=x;
-       menor=y;}
-       else{
-       medio=y;
-       menor=z;}}
+    public static void menoramayor(int x, int y, int z){
+        int mayor,medio,menor;
+        if(x>y && x>z){
+            mayor=x;
+            if(y>z){
+                medio=y;
+                menor=z;
+            }
+            else{
+                medio=z;
+                menor=y;
+            }
+        }
+        else if(y>x && y>z){
+            mayor=y;
+            if(x>z){
+                medio=x;
+                menor=z;}
+            else{
+                medio=z;
+                menor=x;
+            }
+        }
+        else{
+            mayor=z;
+            if(x>y){
+                medio=x;
+                menor=y;
+            }
+            else{
+                medio=y;
+                menor=z;
+            }
+        }
     System.out.println("El orden de menor a mayor de ("+x+","+y+","+z+") es;"+menor+"<"+medio+"<"+mayor);
-  }
-  public static void main(String[]args){
-   menoramayor(20,5,10);
-   menoramayor(5,5,0);   
-  }
-       }
+    }
+    public static void main(String[]args){
+    menoramayor(20,5,10);
+    menoramayor(5,5,0);   
+    }
+
 //-------------------------------------------------------------Ejercicio 3: ¿Es múltiplo?-------------------------------------------------------------
-  public static boolean esMultiplo (int x, int y){
-       boolean res=false;
-     if(x%y==0){
-         res=true;
-     }
-     return res;
-  }
-  public static void main(String[]args){
-    Scanner sc=new Scanner(System.in);
-    System.out.println("Introduce el dividendo.");
-    int dividendo=sc.nextInt();
-    System.out.println("Introduce el dividendo.");
-    int divisor=sc.nextInt();
-    while(divisor==0){
-          System.out.println("Vaya te has equivodado, introduce el dividendo, recuerda que sea distinto de 0.");
-          divisor=sc.nextInt();
+    public static boolean esMultiplo (int x, int y){
+        boolean res=false;
+        if(x%y==0){
+            res=true;
+        }
+        return res;
     }
-    if(esMultiplo(dividendo,divisor)==true){
-          System.out.println(dividendo+" es múltiplo de "+divisor);
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce el dividendo.");
+            int dividendo=sc.nextInt();
+        System.out.println("Introduce el dividendo.");
+            int divisor=sc.nextInt();
+        while(divisor==0){
+            System.out.println("Vaya te has equivodado, introduce el dividendo, recuerda que sea distinto de 0.");
+            divisor=sc.nextInt();
+        }
+        if(esMultiplo(dividendo,divisor)==true){
+            System.out.println(dividendo+" es múltiplo de "+divisor);
+        }
+        else{
+            System.out.println(dividendo+" no es múltiplo de "+divisor);
+        }
     }
-    else{
-      System.out.println(dividendo+" no es múltiplo de "+divisor);
-    }
-    }
-}
 //-------------------------------------------------------------Ejercicio 4: Máximo de cuatro números-------------------------------------------------------------
-  public static int maximo(int x, int y){
-    int res;
-     if(x<y){
-       res=y;
-     }
-     else{
-       res=x;
-     }
-     return res;
+    public static int maximo(int x, int y){
+        int res;
+        if(x<y){
+            res=y;
+        }
+        else{
+            res=x;
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce un número.");
+            int num1=sc.nextInt();
+        System.out.println("Introduce otro número.");
+            int num2=sc.nextInt();
+        System.out.println("Introduce otro número.");
+            int num3=sc.nextInt();
+        System.out.println("Introduce otro número.");
+            int num4=sc.nextInt();
+
+        System.out.println("El número más grande introducido por pantalla es "+;maximo(maximo(num1,num2), maximo(num3,num4)));
+    }
+//-------------------------------------------------------------Ejercicio 5: Cálculo de áreas-------------------------------------------------------------
+    public static double calcularAreaCirculo(int x){
+        return x*x*Math.PI;
+    }
+
+    public static double calcularAreaTriangulo(int x, int y){
+        return x*y/2;
+    }
+
+    public static double calcularAreaRectángulo(int x, int y){
+        return x*y;
+    }
+
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("1. Calcular área de círculo");
+        System.out.println("2. Calcular área de triángulo");
+        System.out.println("3. Calcular área de rectángulo");
+        System.out.println("Introduzca su opción:");
+        int opcion=sc.nextInt();
+        
+    switch(opcion){
+
+        case 1:
+            System.out.println("Introduce el radio");
+            int radio=sc.nextInt();
+            while(radio<=0){
+            System.out.println("Vaya te has equivodaco, introduce el radio");
+            }
+            System.out.println("El area del circulo es "+calcularAreaCirculo(radio));
+        break;
+            
+        case 2:
+            System.out.println("Introduce la base");
+            int base1=sc.nextInt();
+            while(base1<=0){
+            System.out.println("Vaya te has equivocado, introduce la base");
+            base1=sc.nextInt();
+            }
+            System.out.println("Introduce la altura");
+            int altura=sc.nextInt();
+            while(altura<=0){
+            sc.nextLine();
+            System.out.println("Vaya te has equivocado, introduce la altura");
+            altura=sc.nextInt();
+            }
+            System.out.println("El area del triángulo es "+calcularAreaTriangulo(base1,altura));
+        break;
+            
+        case 3:
+            System.out.println("Introduce la base");
+            int base2=sc.nextInt();
+            while(base2<=0){
+            System.out.println("Vaya te has equivocado, introduce la base");
+            base2=sc.nextInt();
+            }
+            System.out.println("Introduce la distancia de los lados");
+            int lado=sc.nextInt();
+            while(lado<=0){
+            System.out.println("Vaya te has equivocado, introduce la distancia de los lados");
+            lado=sc.nextInt();
+            }
+            System.out.println("El area del rectángulo es "+calcularAreaRectángulo(base2,lado));
+        break;
+        }
+    }
+//-------------------------------------------------------------Ejercicio 6: Comprobar fechas-------------------------------------------------------------
+    public static boolean comprobarDia(int x){
+        boolean res=false;
+        if(0<x && x<32){
+            res=true;
+        }
+        return res;
+    }
+    public static boolean comprobarMes(int x){
+        boolean res=false;
+        if(0<x && x<13){
+            res=true;
+        }
+        return res;
+    }
+    public static boolean comprobarAño(int x){
+        boolean res=false;
+        if(0<x){
+        res=true;
+        }
+        return res; 
+    }
+  public static boolean esBisiesto(int x,int y){
+    boolean res=false;
+    if(y%4==0){
+      if(y%400==0 && !(y%100==0)){
+        if(0<x && x<30){
+          res=true;
+        }
+      }
+    }
+    return res;
   }
   public static void main(String[]args){
+    boolean resultadofinal=false;
     Scanner sc=new Scanner(System.in);
-    System.out.println("Introduce un número.");
-    int num1=sc.nextInt();
-    System.out.println("Introduce otro número.");
-    int num2=sc.nextInt();
-    System.out.println("Introduce otro número.");
-    int num3=sc.nextInt();
-    System.out.println("Introduce otro número.");
-    int num4=sc.nextInt();
-    if(maximo(num1,num2)>maximo(num3,num4)){
-      System.out.println("El máximo es "+maximo(num1,num2));
+    System.out.println("Indroduce el dia");
+        int dia=sc.nextInt();
+    System.out.println("Indroduce el mes");
+        int mes=sc.nextInt();
+    System.out.println("Indroduce el año");
+        int año=sc.nextInt();
+    if(comprobarDia(dia) && comprobarMes(mes) && comprobarAño(año) && esBisiesto(dia, año)){
+      resultadofinal=true;
     }
-    else{
-      System.out.println("El máximo es "+maximo(num3,num4));
-    }
-    sc.close();
-    }
+    System.out.println("La fecha introducida es "+resultadofinal);
+ }
 }
-     
-  
-         
-  
-         
