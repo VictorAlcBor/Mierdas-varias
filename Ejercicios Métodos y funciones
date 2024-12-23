@@ -20,6 +20,7 @@ public class pruebas{
        System.out.println("Para la edad 35,"+rangoEdad(35));
        System.out.println("Para la edad 0,"+rangoEdad(0));
        System.out.println("Para la edad -5,"+rangoEdad(-5));
+}
 //-------------------------------------------------------------Ejercicio 2: Ordenación-------------------------------------------------------------
   public class pruebas{
   public static void menoramayor(int x, int y, int z){
@@ -95,6 +96,36 @@ public static void main(String[]args){
     else{
       System.out.println(dividendo+" no es múltiplo de "+divisor);
     }
+    }
+}
+//-------------------------------------------------------------Ejercicio 4: Máximo de cuatro números-------------------------------------------------------------
+  public static int maximo(int x, int y){
+    int res;
+     if(x<y){
+       res=y;
+     }
+     else{
+       res=x;
+     }
+     return res;
+  }
+  public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Introduce un número.");
+    int num1=sc.nextInt();
+    System.out.println("Introduce otro número.");
+    int num2=sc.nextInt();
+    System.out.println("Introduce otro número.");
+    int num3=sc.nextInt();
+    System.out.println("Introduce otro número.");
+    int num4=sc.nextInt();
+    if(maximo(num1,num2)>maximo(num3,num4)){
+      System.out.println("El máximo es "+maximo(num1,num2));
+    }
+    else{
+      System.out.println("El máximo es "+maximo(num3,num4));
+    }
+    sc.close();
     }
 }
      
