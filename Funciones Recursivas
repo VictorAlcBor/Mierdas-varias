@@ -1,1 +1,23 @@
-
+public class pruebas{
+//-------------------------------------------------------------Ejercicio 1: Suma recursiva-------------------------------------------------------------
+    public static int sumaRecursiva(int num){
+       int res=0;
+        if(num<0){
+          res=-num;
+        }
+        else if(num<10){
+            res=num;
+        }
+        else{
+            res=(num%10)+sumaRecursiva(num/10);
+        }
+       return res;
+    }
+        public static void main(String[]args){
+        System.out.println(sumaRecursiva(15));
+        System.out.println(sumaRecursiva(18));
+        System.out.println(sumaRecursiva(35));
+        System.out.println(sumaRecursiva(-5));
+        System.out.println(sumaRecursiva(0));
+    }
+}
