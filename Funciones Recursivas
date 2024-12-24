@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class pruebas{
 //-------------------------------------------------------------Ejercicio 1: Suma recursiva-------------------------------------------------------------
     public static int sumaRecursiva(int num){
