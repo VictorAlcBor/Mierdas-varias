@@ -21,4 +21,35 @@ public class pruebas{
         System.out.println(sumaRecursiva(-5));
         System.out.println(sumaRecursiva(0));
     }
+//-------------------------------------------------------------Ejercicio 2: Invertir número-------------------------------------------------------------
+    public static int invertirNumero(int num){
+        int res;
+        if(num<0){
+          res=-invertirNumero(-num);
+        }
+        if(num<10){
+            res=num;
+        }
+        else{
+            res=invertirNumeroAux(num,0);
+        }
+        return res;
+    }
+    public static int invertirNumeroAux(int num1,int num2){
+        if(num1==0){
+            res=num2;
+        }
+        else{
+            num2=(num1/10)*10;
+            res=invertirNumeroAux(int num1,int num2);
+        }
+        return res;
+    }
+        public static void main(String[]args){
+        System.out.println(invertirNumero(15));
+        System.out.println(invertirNumero(18));
+        System.out.println(invertirNumero(35));
+        System.out.println(invertirNumero(-5));
+        System.out.println(invertirNumero(0));
+    }
 }
