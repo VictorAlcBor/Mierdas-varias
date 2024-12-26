@@ -70,4 +70,32 @@ public class pruebas{
             posicion=sc.nextInt();
         System.out.println(fibonacci(posicion));
     }
+//-------------------------------------------------------------Ejercicio 4: Longitud de un número-------------------------------------------------------------
+    public static int longitudnum(int num){
+        int res1;
+        if(num<10 && num>-10){
+            res1=1;
+        }
+        else{
+            res1=longitudnumAux(num,0);
+        }
+        return res1;
+    }
+    public static int longitudnumAux(int num, int Long){
+        int res2=0;
+        if(num==0){
+          res2=Long;
+        }
+        else{
+          res2=longitudnumAux(num/10,Long+1);
+        }
+        return res2;
+    }
+    public static void main(String[]args){
+        int medir;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce el número que deseas medir;");
+            medir=sc.nextInt();
+        System.out.println(longitudnum(medir));
+    }
 }
