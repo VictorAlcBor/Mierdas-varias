@@ -52,4 +52,22 @@ public class pruebas{
         System.out.println(invertirNumero(-5));
         System.out.println(invertirNumero(0));
     }
+//-------------------------------------------------------------Ejercicio 3: Sucesión de Fibonacci-------------------------------------------------------------
+    public static int fibonacci(int pos){
+        int res;
+        if(pos==1 || pos==2){
+            res=1;
+        }
+        else{
+            res=fibonacci(pos-1)+fibonacci(pos-2);
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        int posicion;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce el número de la posición que deseas encontrar;");
+            posicion=sc.nextInt();
+        System.out.println(fibonacci(posicion));
+    }
 }
