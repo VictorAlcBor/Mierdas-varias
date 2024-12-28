@@ -1,1 +1,31 @@
+import java.util.Scanner;
+public class pruebas{
+//-------------------------------------------------------------Ejercicios String 1:Cifrado por desplazamiento-------------------------------------------------------------
+    public static String cifradoCesar (String palabra, int desplazamiento){
+        return cifradoCesarAux( palabra, desplazamiento,0);
+    }
+    public static String cifradoCesarAux (String palabra, int desplazamiento, int posicion){
+        String res;
+        if(posicion==palabra.length()){
+            res=palabra;
+        }
+        else{
+            char cambio=(char)(palabra.charAt(posicion)+desplazamiento);
+            String newword=palabra.substring(0,posicion)+cambio+palabra.substring(posicion+1,palabra.length());
+            res=cifradoCesarAux(newword,desplazamiento,posicion+1);
+        }
+        return res;
+    }
 
+        public static void main(String[]args){
+        String palabrainicio;
+        int desplazamiento;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce la palabra a codificar");
+           palabrainicio=sc.nextLine();
+        System.out.println("Introduce el desplazamiento a codificar");
+           desplazamiento=sc.nextInt();
+        System.out.println("La palabra "+palabrainicio+" cifrada es;"+cifradoCesar(palabrainicio,desplazamiento));
+        sc.close();
+    }
+}
