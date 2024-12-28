@@ -98,4 +98,26 @@ public class pruebas{
             medir=sc.nextInt();
         System.out.println(longitudnum(medir));
     }
+//-------------------------------------------------------------Ejercicio 5: MCD de dos números-------------------------------------------------------------
+    public static int mcd(int num1, int num2){
+        int res1;
+        if(num1%num2==0){
+            res1=num2;
+        }
+        else if(num2%num1==0)
+            res1=num1;
+        else{ 
+            res1=mcd(num2,num1%num2);
+        }
+        return res1;
+    }
+    public static void main(String[]args){
+        int a,b;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Introduce lod  numeros que deseas medir");
+           a=sc.nextInt();
+           b=sc.nextInt();
+        System.out.println(mcd(a,b));
+        sc.close();
+    }
 }
