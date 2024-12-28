@@ -18,14 +18,34 @@ public class pruebas{
     }
 
         public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int menu;
+        System.out.println("Selecciona la opición que desees");
+        System.out.println("1.Codificar");
+        System.out.println("2.Descodificar");
+        System.out.println("-----------------------------------");
+        menu=sc.nextInt();
+        sc.nextLine();
+        
         String palabrainicio;
         int desplazamiento;
-        Scanner sc=new Scanner(System.in);
-        System.out.println("Introduce la palabra a codificar");
-           palabrainicio=sc.nextLine();
-        System.out.println("Introduce el desplazamiento a codificar");
-           desplazamiento=sc.nextInt();
-        System.out.println("La palabra "+palabrainicio+" cifrada es;"+cifradoCesar(palabrainicio,desplazamiento));
-        sc.close();
+        
+        if(menu==1){ 
+            System.out.println("Introduce la palabra a codificar");
+            palabrainicio=sc.nextLine();
+            System.out.println("Introduce el desplazamiento a codificar");
+            desplazamiento=sc.nextInt();
+            System.out.println("La palabra "+palabrainicio+" cifrada es;"+cifradoCesar(palabrainicio,desplazamiento));
+        }
+        if(menu==2){
+            System.out.println("Introduce la palabra a descodificar");
+            palabrainicio=sc.nextLine();
+            System.out.println("Introduce el desplazamiento a descodificar");
+            desplazamiento=sc.nextInt();
+            System.out.println("La palabra "+palabrainicio+" cifrada es;"+cifradoCesar(palabrainicio,-desplazamiento));
+        }
+        else{
+            System.out.println("No has elegido opción válida");
+        }
     }
 }
