@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class pruebas{
-//-------------------------------------------------------------Ejercicios String 1:Cifrado por desplazamiento-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios String 2:Comprueba el Correo Electrónico-------------------------------------------------------------
     public static String cifradoCesar (String palabra, int desplazamiento){
         return cifradoCesarAux( palabra, desplazamiento,0);
     }
@@ -46,6 +46,35 @@ public class pruebas{
         }
         else{
             System.out.println("No has elegido opción válida");
+        }
+    }
+//-------------------------------------------------------------Ejercicios String 1:Cifrado por desplazamiento-------------------------------------------------------------
+    public static boolean compruebaEmail (String a){
+        boolean res=false;
+        int pos;
+        String text, dom;
+        if(a.indexOf("@")!=-1){
+            pos=a.indexOf("@");
+            text=a.substring(0, pos);
+            dom=a.substring(pos+1,a.length());
+            if((text.length()>0) && (dom.indexOf(".")>0) && (dom.indexOf(".")<(dom.length()-1))){
+                res=true;
+            }
+        }
+        return res;
+    }
+
+        public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        String correo;
+        System.out.println("Introduce tu correo electrónico;");
+        System.out.println("-----------------------------------");
+        correo=sc.nextLine();
+        if(compruebaEmail(correo)){
+            System.out.println("Se ha guardado correctamente el correo");
+        }
+        else{
+            System.out.println("Correo introducido erroneo");
         }
     }
 }
