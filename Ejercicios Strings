@@ -77,4 +77,33 @@ public class pruebas{
             System.out.println("Correo introducido erroneo");
         }
     }
+//-------------------------------------------------------------Ejercicios String 3:Contasdor de caracteres-------------------------------------------------------------
+    public static int contadorCaracteres(String s, char c){
+            int res=contadorCaracteresAux(s,c,0);
+        return res;
+    }
+    public static int contadorCaracteresAux(String s, char c, int pos){
+        int res=0, contador=0;
+        if (pos<s.length()){
+          if(s.charAt(pos)==c){
+            contador=1;
+          }
+          res=contador+contadorCaracteresAux(s, c, pos + 1);
+        }
+        return res;
+    }
+
+        public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        String text;
+        char caracter;
+        System.out.println("Introduce el texto a analizar");
+        System.out.println("-----------------------------------");
+        text=sc.nextLine();
+        System.out.println("Introduce el caractera buscar");
+        System.out.println("-----------------------------------");
+        caracter=sc.nextLine().charAt(0);;
+        System.out.println("El caracter "+caracter+" se ha repetido un total de "+contadorCaracteres(text,caracter));
+        System.out.println("-----------------------------------");
+    }
 }
