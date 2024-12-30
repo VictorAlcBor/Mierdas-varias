@@ -106,4 +106,36 @@ public class pruebas{
         System.out.println("El caracter "+caracter+" se ha repetido un total de "+contadorCaracteres(text,caracter));
         System.out.println("-----------------------------------");
     }
+    public static String palabraInversa(String s) {
+        String resultado = palabraInversaAux(s, s.length()-1);
+        return resultado;
+    }
+
+    public static String palabraInversaAux(String s, int pos) {
+        String resultado;
+
+        if (pos>-1) { 
+            resultado = s.charAt(pos)+palabraInversaAux(s, pos-1);
+        }
+        else{
+            resultado="";
+        }
+        return resultado; // Retorna el resultado acumulado
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Entrada del texto
+        System.out.println("Introduce el texto a analizar:");
+        System.out.println("-----------------------------------");
+        String text = sc.nextLine();
+
+        // Mostrar resultado
+        System.out.println("El texto invertido de " + text + " es " + palabraInversa(text));
+        System.out.println("-----------------------------------");
+
+    }
+sc.close();
 }
+
