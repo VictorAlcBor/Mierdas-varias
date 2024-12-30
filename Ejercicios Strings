@@ -106,6 +106,7 @@ public class pruebas{
         System.out.println("El caracter "+caracter+" se ha repetido un total de "+contadorCaracteres(text,caracter));
         System.out.println("-----------------------------------");
     }
+//-------------------------------------------------------------Ejercicios String 4:Inversor de palabras-------------------------------------------------------------
     public static String palabraInversa(String s) {
         String resultado = palabraInversaAux(s, s.length()-1);
         return resultado;
