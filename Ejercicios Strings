@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class pruebas{
-//-------------------------------------------------------------Ejercicios String 2:Comprueba el Correo Electrónico-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios String 1:Cifrado por desplazamiento-------------------------------------------------------------
     public static String cifradoCesar (String palabra, int desplazamiento){
         return cifradoCesarAux( palabra, desplazamiento,0);
     }
@@ -48,7 +48,7 @@ public class pruebas{
             System.out.println("No has elegido opción válida");
         }
     }
-//-------------------------------------------------------------Ejercicios String 1:Cifrado por desplazamiento-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios String 2: Comprobación Correo-------------------------------------------------------------
     public static boolean compruebaEmail (String a){
         boolean res=false;
         int pos;
