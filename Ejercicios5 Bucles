@@ -19,4 +19,23 @@ public class pruebas{
         String res;
         res=imprimirAsteriscos(asterisco);
     }
+//-------------------------------------------------------------Ejercicios String 3:Dibujos con asteriscos inversos-------------------------------------------------------------
+    public static String imprimirAsteriscos(String a){
+        String res="";
+        int linea=1;
+        while(linea<9){
+          for(int i=0;i<linea;i++){
+            res=a.substring(0,a.length()-i);
+          }
+            System.out.println(res);
+            linea++;
+            res="";
+        }
+        return res;
+    }
+    public static void main(String[] args){
+        String asterisco="********";
+        String res;
+        res=imprimirAsteriscos(asterisco);
+    }
 }
