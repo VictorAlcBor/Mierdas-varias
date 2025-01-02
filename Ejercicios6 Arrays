@@ -12,3 +12,21 @@ public class pruebas{
         int ejemplo[]={3,9,0,-2};
         System.out.println(aTexto(ejemplo));
     }
+//-------------------------------------------------------------Ejercicios Arrays 2:Elemento a buscar en un array-------------------------------------------------------------
+    public static boolean esta(int elem, int[] array){
+        boolean res=false;
+        for(int i=0;i<array.length;i++){
+            if(array[i]==elem){
+                res=true;
+            }
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int ejemplo[]={3,9,0,-2};
+        System.out.println("Introduce el elemento a buscar");
+        int buscar=sc.nextInt();
+        System.out.println(esta(buscar, ejemplo));
+    }
+
