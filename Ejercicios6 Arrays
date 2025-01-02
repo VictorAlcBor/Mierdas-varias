@@ -71,3 +71,20 @@ public static int cuentaImpares(int[] array){
         int ejemplo[]={3,9,0,-2};
         System.out.println(cuentaImpares(ejemplo));
     }
+//-------------------------------------------------------------Ejercicios Arrays 6:Contar coincidencias en el array-------------------------------------------------------------
+    public static int contar(int elem, int[] array){   
+        int res=0;
+        for(int i=0;i<array.length;i++){
+            if(array[i]==elem){
+                res++;
+            }
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int ejemplo[]={3,9,0,-2};
+        System.out.println("Introduce el elemento a buscar");
+        int buscar=sc.nextInt();
+        System.out.println("Hemos encontrado un total de "+contar(buscar, ejemplo)+" veces, en el vector a buscar");
+    }
