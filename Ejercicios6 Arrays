@@ -103,3 +103,18 @@ public static int cuentaImpares(int[] array){
         int ejemplo[]={3,9,0,-2};
         System.out.println("¿El array se encuentra ordenado? "+estaOrdenado(ejemplo));
     }
+//-------------------------------------------------------------Ejercicios Arrays 8:Máximo del vector-------------------------------------------------------------
+    public static int maximo(int[] array){
+        int res=array[0];
+        for(int i=1;i<array.length;i++){
+            if(array[i]>res){
+                res=array[i];
+            }
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int ejemplo[]={3,-2,0,9};
+        System.out.println("El array máximo del array es el "+maximo(ejemplo));
+    }
