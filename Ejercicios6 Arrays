@@ -88,3 +88,18 @@ public static int cuentaImpares(int[] array){
         int buscar=sc.nextInt();
         System.out.println("Hemos encontrado un total de "+contar(buscar, ejemplo)+" veces, en el vector a buscar");
     }
+//-------------------------------------------------------------Ejercicios Arrays 7:¿Esta ordenado el array?-------------------------------------------------------------
+    public static boolean estaOrdenado(int[] array){
+    boolean res=true;
+        for(int i=1;i<array.length;i++){
+            if(array[i-1]>array[i]){
+                res=false;
+            }
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        int ejemplo[]={3,9,0,-2};
+        System.out.println("¿El array se encuentra ordenado? "+estaOrdenado(ejemplo));
+    }
