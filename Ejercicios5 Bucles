@@ -1,6 +1,8 @@
 import java.util.Scanner;
 public class pruebas{
 //-------------------------------------------------------------Ejercicios Bucles 2:Dibujos con asteriscos-------------------------------------------------------------
+Enunciado, Introducir un valor de N, y mostrar en pantalla todos los números primos anteriores a “N”
+//-------------------------------------------------------------Ejercicios Bucles 2:Dibujos con asteriscos-------------------------------------------------------------
     public static String imprimirAsteriscos(String a){
         String res="";
         int linea=1;
@@ -94,4 +96,15 @@ public class pruebas{
             System.out.println("El factorial de "+num+" es; "+res);
         }
     }
+//-------------------------------------------------------------Ejercicios Bucles 6:Calcular factorial entre 1 y 10-------------------------------------------------------------
+public static void main(String[] args){
+    Scanner sc=new Scanner(System.in);
+    int num=1;
+    int res=1;
+        for(int i=1;i<11;i++){
+            res*=i;
+            System.out.println("El factorial de "+i+" es; "+res);
+        }
+    }
+    sc.close();
 }
