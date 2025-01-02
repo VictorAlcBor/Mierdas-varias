@@ -43,7 +43,7 @@ public class pruebas{
         int ejemplo[]={3,9,0,-2};
         System.out.println(sumaPosPares(ejemplo));
     }
-//-------------------------------------------------------------Ejercicios Arrays 3:Suma de números pares del Array-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios Arrays 4:Suma de números pares del Array-------------------------------------------------------------
     public static int sumaPares(int[] array){
     int res=0;
         for(int i=0;i<array.length;i++){
@@ -56,4 +56,18 @@ public class pruebas{
     public static void main(String[]args){
         int ejemplo[]={3,9,0,-2};
         System.out.println(sumaPares(ejemplo));
+    }
+//-------------------------------------------------------------Ejercicios Arrays 5:Contar elementos impares-------------------------------------------------------------
+public static int cuentaImpares(int[] array){
+    int res=0;
+        for(int i=0;i<array.length;i++){
+            if(!(array[i]%2==0)){
+                res++;
+            }
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        int ejemplo[]={3,9,0,-2};
+        System.out.println(cuentaImpares(ejemplo));
     }
