@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class pruebas{
-//-------------------------------------------------------------Ejercicios Bucles 2:Dibujos con asteriscos-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios Bucles 1:Dibujos con asteriscos-------------------------------------------------------------
 Enunciado, Introducir un valor de N, y mostrar en pantalla todos los números primos anteriores a “N”
 //-------------------------------------------------------------Ejercicios Bucles 2:Dibujos con asteriscos-------------------------------------------------------------
     public static String imprimirAsteriscos(String a){
