@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class pruebas{
-//-------------------------------------------------------------Ejercicios String 2:Dibujos con asteriscos-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios Bucles 2:Dibujos con asteriscos-------------------------------------------------------------
     public static String imprimirAsteriscos(String a){
         String res="";
         int linea=1;
@@ -19,7 +19,7 @@ public class pruebas{
         String res;
         res=imprimirAsteriscos(asterisco);
     }
-//-------------------------------------------------------------Ejercicios String 3:Dibujos con asteriscos inversos-------------------------------------------------------------
+//-------------------------------------------------------------Ejercicios Bucles 3:Dibujos con asteriscos inversos-------------------------------------------------------------
     public static String imprimirAsteriscos(String a){
         String res="";
         int linea=1;
@@ -37,5 +37,61 @@ public class pruebas{
         String asterisco="********";
         String res;
         res=imprimirAsteriscos(asterisco);
+    }
+//-------------------------------------------------------------Ejercicios Bucles 4:Dibujo del cuadrado-------------------------------------------------------------
+    public static String imprimirCuadrado(int lo){
+    String res="";
+
+    for(int linea=0;linea<lo;linea++){
+            if(linea==0 || linea==lo-1){
+                for(int i=0;i<lo;i++)
+                res+="-";
+            }
+            else{
+                res="|";
+                for(int i=1;i<lo-1;i++){
+                    res+="";                
+                    }
+                res+="|";
+                }
+            System.out.println(res);
+            res="";                
+            }
+    return res;
+    }
+
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Introduce la loitud que deseas de lado para tu cuadrado");
+        int lo=sc.nextInt();
+        
+        if(lo<0){
+            System.out.println("longitud introducida no válida");
+        }
+        else{
+            imprimirCuadrado(lo);
+        }	
+    }
+//-------------------------------------------------------------Ejercicios Bucles 5:Calcular factorial-------------------------------------------------------------
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+
+        System.out.println("Introduce el número del que deseas hallar su factorial;");
+        int num=sc.nextInt();
+
+        int res=1;
+        if(num<0){
+            System.out.println("Número introducido no válido");
+        }
+        else if(num==0 || num==1){
+            System.out.println("El factorial de "+num+" es; "+res);        
+        }	
+        else{
+            for(int i=1;i<num+1;i++){
+                res*=i;
+            }
+            System.out.println("El factorial de "+num+" es; "+res);
+        }
     }
 }
