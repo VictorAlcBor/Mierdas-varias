@@ -132,21 +132,33 @@ public static int cuentaImpares(int[] array){
         System.out.println(invertir(ejemplo));
     }
     //El ejercicio es correcto, pero es incapaz de imprimir el propio array, solo muestra su espacio de memoria
-//-------------------------------------------------------------Ejercicios Arrays 10:Suma de vectores-------------------------------------------------------------
-    public static int[] suma(int[] array1, int[] array2){        
-        int[] vectorsuma=new int[array1.length+array2.length];
-        for(int i=0;i<array1.length;i++){
-            vectorsuma[i]=array1[i];
+    //-------------------------------------------------------------Ejercicios Arrays 10:Suma de vectores-------------------------------------------------------------
+        public static int[] suma(int[] array1, int[] array2){        
+            int[] vectorsuma=new int[array1.length+array2.length];
+            
+            if(array1.length<=array2.length){
+                for(int i=0;i<array1.length;i++){
+                    vectorsuma[i]=array1[i]+array2[i];
+                }
+                for(int i=array1.length;i<array2.length;i++){
+                    vectorsuma[i]=array2[i];
+                }
+            }
+            else{
+                for(int i=0;i<array2.length;i++){
+                    vectorsuma[i]=array1[i]+array2[i];
+                }
+                for(int i=array2.length;i<array1.length;i++){
+                    vectorsuma[i]=array1[i];
+                }
+            }
+            return vectorsuma;
         }
-        for(int i=0;i<array2.length;i++){
-            vectorsuma[array1.length+i]=array2[i];
+            
+        public static void main(String[]args){
+            Scanner sc=new Scanner(System.in);
+            int ejemplo1[]={3,-2,0,9};
+            int ejemplo2[]={8,3,7,-5,2};
+            System.out.println(suma(ejemplo1,ejemplo2));
         }
-        return vectorsuma;
-    }
-    public static void main(String[]args){
-        Scanner sc=new Scanner(System.in);
-        int ejemplo1[]={3,-2,0,9};
-        int ejemplo2[]={8,3,7,-5};
-        System.out.println(suma(ejemplo1,ejemplo2));
-    }
-    //El ejercicio es correcto, pero es incapaz de imprimir el propio array, solo muestra su espacio de memoria
+        //El ejercicio es correcto, pero es incapaz de imprimir el propio array, solo muestra su espacio de memoria
