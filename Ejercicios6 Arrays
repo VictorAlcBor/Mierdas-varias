@@ -43,3 +43,17 @@ public class pruebas{
         int ejemplo[]={3,9,0,-2};
         System.out.println(sumaPosPares(ejemplo));
     }
+//-------------------------------------------------------------Ejercicios Arrays 3:Suma de números pares del Array-------------------------------------------------------------
+    public static int sumaPares(int[] array){
+    int res=0;
+        for(int i=0;i<array.length;i++){
+            if(array[i]%2==0){
+                res+=array[i];
+            }
+        }
+        return res;
+    }
+    public static void main(String[]args){
+        int ejemplo[]={3,9,0,-2};
+        System.out.println(sumaPares(ejemplo));
+    }
